@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="styles.css">
+
+    </head> 
+    <body>
+        <!-- <h1>Home</h1> -->
+        
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Colby Allen Tempro (aka my CAT) will you be my Valentine?</h1>
+            </div>
+            
+            <div class="gif_container">
+                <img src="https://i.pinimg.com/originals/8a/f0/8a/8af08a3556c6e66f5ce88539183efd23.gif" alt="Cute animated illustration">
+            </div>
+            
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+            <div class="homesong">
+                <audio controls autoplay loop src="./ForVday.wav"></audio>
+                </div>
+        </div>
+        
+
+    </body> 
+</html>
